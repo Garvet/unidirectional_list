@@ -108,7 +108,7 @@ void List::push_front(int val) {
 }
 
 void List::pop_front() {
-    if (get_size())
+    if (first_element)
         first_element=std::move(first_element->next_element);
 }
 
@@ -253,7 +253,7 @@ void List::push_front(int val) {
 }
 
 void List::pop_front() {
-    if (get_size())
+    if (first_element)
         first_element=std::move(first_element->next_element);
 }
 
