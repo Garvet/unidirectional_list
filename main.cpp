@@ -6,14 +6,14 @@ int main() {
     int N;
     List list;
     int elements = 10;
-    int number_insert=2;
-    int number_erase=6;
+    int number_insert = 2;
+    int number_erase = 6;
 
     if(list.is_empty()) {
 
         std::cout << "Create " << elements << " elements" << std::endl;
-        for(int i=1;i<=elements;++i) {
-            list.push_front(10*(i-1));
+        for(int i=1; i <= elements; ++i) {
+            list.push_front(10 * (i - 1));
         }
 
         N = list.get_size();
@@ -21,6 +21,9 @@ int main() {
             std::cout << i << "\t" << list[i] << std::endl;
         }
 
+        std::cout << std::endl;
+        std::cout << "get_front" << std::endl;
+        list.get_front();
 
         std::cout << std::endl;
         std::cout << "Pop element" << std::endl;
@@ -71,18 +74,18 @@ int main() {
         }
 
         std::cout << std::endl;
-        std::cout << "list3=list" << std::endl;
+        std::cout << "list3 = list" << std::endl;
         List list4;
         List list3(list4);
-        list3=list;
+        list3 = list;
         N = list3.get_size();
         for (int i = 0; i < N; ++i) {
             std::cout << i << "\t" << list3[i] << std::endl;
         }
 
         std::cout << std::endl;
-        std::cout << "list4=std::move(list)" << std::endl;
-        list4=std::move(list);
+        std::cout << "list4 = std::move(list)" << std::endl;
+        list4 = std::move(list);
         N = list4.get_size();
         for (int i = 0; i < N; ++i) {
             std::cout << i << "\t" << list4[i] << std::endl;
@@ -94,8 +97,8 @@ int main() {
         }
 
         std::cout << std::endl;
-        std::cout << "List list5=std::move(list2)" << std::endl;
-        List list5=std::move(list2);
+        std::cout << "List list5 = std::move(list2)" << std::endl;
+        List list5 = std::move(list2);
         N = list5.get_size();
         for (int i = 0; i < N; ++i) {
             std::cout << i << "\t" << list5[i] << std::endl;
