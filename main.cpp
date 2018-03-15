@@ -4,7 +4,7 @@
 
 int main() {
     int N;
-    List list;
+    List<int> list;
     int elements = 10;
     int number_insert = 2;
     int number_erase = 6;
@@ -67,7 +67,7 @@ int main() {
 
         std::cout << std::endl;
         std::cout << "list2(list)" << std::endl;
-        List list2(list);
+        List<int> list2(list);
         N = list2.get_size();
         for (int i = 0; i < N; ++i) {
             std::cout << i << "\t" << list2[i] << std::endl;
@@ -75,8 +75,8 @@ int main() {
 
         std::cout << std::endl;
         std::cout << "list3 = list" << std::endl;
-        List list4;
-        List list3(list4);
+        List<int> list4;
+        List<int> list3(list4);
         list3 = list;
         N = list3.get_size();
         for (int i = 0; i < N; ++i) {
@@ -98,7 +98,7 @@ int main() {
 
         std::cout << std::endl;
         std::cout << "List list5 = std::move(list2)" << std::endl;
-        List list5 = std::move(list2);
+        List<int> list5 = std::move(list2);
         N = list5.get_size();
         for (int i = 0; i < N; ++i) {
             std::cout << i << "\t" << list5[i] << std::endl;
